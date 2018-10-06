@@ -1,0 +1,57 @@
+<!--div [@routerTransition]-->
+    <app-page-header [heading]="'Co-Referencing'" [icon]="'fa-edit'"></app-page-header>
+
+    <div class="row">
+        <div class="col-lg-2"></div>
+            <div class="col-lg-8">
+                <div class="card card-default">
+                    <form role="form">
+                        <fieldset class="form-group">
+                            <label>      Text Input:</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter text" [(ngModel)]="text.article" [ngModelOptions]="{standalone: true}"></textarea>
+                            <p class="help-block">Input full text Here.</p>
+
+                            <label>      Signal Input:</label>
+                            <textarea class="form-control" rows="3" placeholder="Enter text" [(ngModel)]="text.signalSentence" [ngModelOptions]="{standalone: true}"></textarea>
+                            <p class="help-block">Input Signal Sentence Text Here.</p>
+                        
+                            <p align="center"><button type="button" class="btn btn-lg btn-success" (click)="addText()">Submit</button></p>
+                        </fieldset>
+                            <!--h6 style = "text-align: center;">OR</h6><hr>
+
+
+                        <fieldset class="form-group">
+                            <label>      URL Input:</label>
+                            <input class="form-control" placeholder="Enter URL">
+                            <p class="help-block">example: http://abcd.xyz .</p>
+                            <p align="center"><button type="button" class="btn btn-lg btn-success">Submit</button></p>
+                         </fieldset-->
+                
+                    </form>
+                    <hr>
+                </div>
+                <div *ngIf="coref" [ngClass] = "'success'"> 
+                    <div class="card">
+                    <div class="card-header">Results</div>
+                        <div class="card-block">
+                            <div class="alert alert-warning mt-3 mb-0">
+                            <b><i><h5>Sentence :</h5></i></b>{{articles}}
+                            </div>
+
+                            <div class="alert alert-warning mt-3 mb-0">
+                            <b><i><h5>Signal :</h5></i></b>{{signal}}
+                            </div>
+
+                            <div class="alert alert-info mt-3 mb-0">
+                            <b><i><h5>Co-Referenced Sentence :</h5></i></b>{{coref}}
+                            </div>
+
+                            </div>
+                        </div>
+                </div>
+
+            </div>
+        <div class="col-lg-2"></div>
+    </div>
+         
+        

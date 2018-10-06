@@ -1,0 +1,97 @@
+<nav class="sidebar" [ngClass]="{sidebarPushRight: isActive}">
+    <ul class="list-group"><li></li>
+        <a routerLink="/dashboard" [routerLinkActive]="['router-link-active']" class="list-group-item">
+            <i class="fa fa-fw fa-dashboard"></i>&nbsp;{{ 'dashboard' | translate }}
+        </a>
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('pages')">
+                <span><i class="fa fa-plus"></i>&nbsp;{{ 'services' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'pages'">
+                <ul class="submenu">
+                    <li>
+                        <a [routerLink]="['/tokenization']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                        <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'tokenization' | translate }}
+                        </span></a>
+                    </li>
+                    <!--li>
+                        <a [routerLink]="['/sentanlys']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                        <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'sentanlys' | translate }}
+                        </span></a>
+                    </li-->
+                    <li>
+                        <a [routerLink]="['/sentencetagging']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                        <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'sentencetagging' | translate }}
+                        </span> </a>
+                    </li>
+                    <li>
+                     <a [routerLink]="['/nertagging']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                        <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'nertagging' | translate }}
+                        </span></a>
+                    </li>
+                    <!--li>
+                     <a [routerLink]="['/coreferencing']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                     <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'coreferencing' | translate }}
+                        </span></a>
+                    </li>
+                    <!--li>
+                    <a [routerLink]="['/classification']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                        <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'classification' | translate }}
+                        </span></a>
+                    </li-->
+                    <li>
+                    <a [routerLink]="['/conceptextraction']" [routerLinkActive]="['router-link-active']" class="list-group-item">
+                    <span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'conceptextraction' | translate }}
+                    </span></a>
+                    </li>
+
+
+                </ul>
+            </li>
+        </div>
+        
+        <!--div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('cases')">
+                <span><i class="fa fa-plus"></i>&nbsp;{{ 'testcases' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'cases'">
+                <ul class="submenu">
+                    <li>
+                        <a href="#"><span><i class="fa fa-angle-double-right"></i>&nbsp;Test Case 1</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span><i class="fa fa-angle-double-right"></i>&nbsp;Test Case 2</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span><i class="fa fa-angle-double-right"></i>&nbsp;Docs</span></a>
+                    </li>
+                </ul>
+            </li>
+        </div-->
+        <!--
+        <div class="nested-menu">
+            <a class="list-group-item" (click)="addExpandClass('about')">
+                <span><i class="fa fa-plus"></i>&nbsp;{{ 'aboutus' | translate }}</span>
+            </a>
+            <li class="nested" [class.expand]="showMenu === 'about'">
+                <ul class="submenu">
+                    <li>
+                        <a href="http://www.bostonanalytics.com/team.php"><span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'ourteam' | translate }}</span></a>
+                    </li>
+                    <li>
+                        <a href="http://www.bostonanalytics.com/our-story.php"><span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'companyoverview' | translate }}</span></a>
+                    </li>
+                    <li>
+                        <a href="#"><span><i class="fa fa-angle-double-right"></i>&nbsp;{{ 'ourpartners' | translate }}</span></a>
+                    </li>
+                </ul>
+            </li>
+        </div>
+
+        
+        <a href="http://www.bostonanalytics.com/contact.php" class="list-group-item">
+            <i class="fa fa-tree"></i>&nbsp;{{ 'contactus' | translate }}
+        </a>
+        -->
+    </ul>
+</nav>
